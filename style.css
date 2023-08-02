@@ -37,12 +37,68 @@ body {
   margin-bottom: 30px;
 }
 
+.item1 { grid-area: superVip; }
+.item2 { grid-area: loungeVip; }
+.item3 { grid-area: camarotes; }
+.item4 { grid-area: techado; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'superVip loungeVip loungeVip loungeVip camarotes'
+    'techado loungeVip loungeVip loungeVip camarotes';
+  gap: 20px;
+  padding: 15px;
+  /*background-color: #1d1c2b;*/
+}
+
+.grid-container > div {
+  padding: 20px 0;
+  /*background-color: #353535;*/
+}
+
 .seat {
   background-color: #444451;
   height: 26px;
   width: 32px;
   margin: 3px;
-  font-size: 50px;
+  font-size: 100%;
+  text-align: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.seat2 {
+  height: 26px;
+  margin: 3px;
+  font-size: 100%;
+  text-align: center;
+}
+
+.seat3 {
+  height: 26px;
+  width: 32px;
+  margin: 3px;
+  font-size: 100%;
+}
+
+.seat4 {
+  background-color: #444451;
+  height: 26px;
+  width: 36px;
+  margin: 3px;
+  font-size: 100%;
+  text-align: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.seat5 {
+  background-color: #444451;
+  height: 26px;
+  width: 38px;
+  margin: 3px;
+  font-size: 100%;
+  text-align: center;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
@@ -52,16 +108,13 @@ body {
 }
 
 .seat.sold {
-  background-color: #fff;
+  background-color: #ee2929;
+}
+.seat4.sold {
+  background-color: #ee2929;
 }
 
-.seat:nth-of-type(2) {
-  margin-right: 18px;
-}
 
-.seat:nth-last-of-type(2) {
-  margin-left: 18px;
-}
 
 .seat:not(.sold):hover {
   cursor: pointer;
